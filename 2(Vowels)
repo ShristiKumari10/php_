@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels</title>
+</head>
+<body>
+<h1>Consonant or Vowel Checker</h1>
+    <form method="post" action="">
+        <label>Enter a letter:</label>
+        <input type="text" name="letter" required>
+        <br><br>
+        <input type="submit" name="submit" value="Check">
+    </form>
+    <?php if(isset($_POST['submit'])){
+        echo checkvowel($_POST['input']);
+
+    }
+    function checkvowel ($ch)
+    {
+        switch($ch)
+        {
+            case 'a':
+                echo "Given character {$ch} is vowel";
+                break;
+
+                case 'e':
+                    echo "Given character {$ch} is vowel";
+                    break;
+
+                    case 'i':
+                        echo "Given character {$ch} is vowel";
+                        break;
+
+                        case 'o':
+                            echo "Given character {$ch} is vowel";
+                            break;
+
+                            case 'u':
+                                echo "Given character {$ch} is vowel";
+                                break;
+
+                                case 'A':
+                                    echo "Given character {$ch} is vowel";
+                                    break;
+
+                                    case 'E':
+                                        echo "Given character {$ch} is vowel";
+                                        break;
+
+                                        case 'I':
+                                            echo "Given character {$ch} is vowel";
+                                            break;
+
+                                            case 'O':
+                                                echo "Given character {$ch} is vowel";
+                                                break;
+
+                                                case 'U':
+                                                    echo "Given character {$ch} is vowel";
+                                                    break;
+
+                                                    default:
+                                                    echo "Given character {$ch} is Consonant";
+                                                }
+        }
+    
+
+    ?>
+</body>
+</html>
