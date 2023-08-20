@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>largestnum in 2D array</title>
+</head>
+<body>
+    <form action = "" method="post">
+        <label for="2darray">Enter 2D Array(subarrays are comma-seperated,semicolon to seperate subarrays):</label><br>
+        <input type="text" id="2darray" name="2darray" value="">
+        <br>
+        <input type ="submit" value="submit">
+</form>
+<?php
+if(isset($_POST['2darray'])){
+    $input=$_POST['2darray'];
+
+    //split the input into subarrays
+$subArrays = explode(";",$input);
+
+   //initialize the 2D array
+   $twoDArray=[];
+   //convert each subarray into an actual array and add it to the 2D array
+   foreach($subArrays as $subArray){
+    $twoDArray[]=array_map('intval',explode(',',$subArray));
+   }
+   //print the 2D array
+   echo "<pre>";
+   print_r($twoDArray);
+   echo "</pre>";
+   //we have 2D array now and can proceed to find the max value
+   $maxValue=PHP_INT_MIN; //initialize with the smallest integer
+   foreach($twoDArray as $subArray){
+    foreach($subArray as $value){
+        if($value > $maxValue){
+            $maxValue=$value;
+        }
+    }
+   }
+
+echo "The max value is".$maxValue;
+}
+   ?> 
+</body>
+</html>
