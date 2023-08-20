@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indexed Arrays</title>
+
+<html>
+    <head>
+        <title>Index Arrays</title>
+    </head>
+    <body>
+        <?php
+        $cars = array("Hondacity","CRV","23");
+        echo "<h3>"."Printing the type and length of the array"."<br>"."</h3>";
+        echo var_dump($cars),"<br>";
+        echo "<h3>"."Printing the arrays using print_r statements<br>"."</h3>";
+        print_r($cars);
+        $cars2 = array("I10","I20","santro");
+        echo "<br><h3>printing the element using the looping structure</h3>";
+        for($i=0;$i<count($cars);$i++)
+        echo $cars[$i]."<br>";
+
+        ?>
+    </body>
+</html>
