@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>largest of Three numbers</title>
+</head>
+<body>
+    <h2>finding largest of three numbers</h2>
+    <form method="post">
+        <input type="number" name="num1" placeholder="Enter first number"><br><br>
+        <input type="number" name="num2" placeholder="Enter second number"><br><br>
+        <input type="number" name="num3" placeholder="Enter third number"><br><br>
+        <input type="submit" name="submit" value="Find">
+    </form>
+    <?php
+    //It also should tell if all three numbers are equal 
+    //It should also tell if any two numbers are equal and largest among three numbers it should mention that two numbers are equal and largest among three numbers
+    function largest($n1, $n2, $n3){
+        if ($n1 > $n2 && $n1 > $n3) {
+            echo "$n1 is largest";
+        } elseif ($n2 > $n1 && $n2 > $n3) {
+            echo "$n2 is largest";
+        } elseif ($n3 > $n1 && $n3 > $n2) {
+            echo "$n3 is largest";
+        } elseif ($n1 === $n2 && $n1 > $n3) {
+            echo "$n1 and $n2 are equal and largest among three numbers";
+        } elseif ($n1 === $n3 && $n1 > $n2) {
+            echo "$n1 and $n3 are equal and largest among three numbers";
+        } elseif ($n2 === $n3 && $n2 > $n1) {
+            echo "$n2 and $n3 are equal and largest among three numbers";
+        } else {
+            echo "All three numbers are equal";
+        }
+    }
+    
+    if(isset($_POST['submit'])){
+        $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
+        $num3 = $_POST['num3'];
+        largest($num1, $num2, $num3);
+    }
+    
+
+    
+    ?>
+    
+    
+</body>
+</html>
