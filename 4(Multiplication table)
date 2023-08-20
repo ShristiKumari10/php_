@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title></title>
+</head>
+<body>
+    <h3>Multiplication Table</h3>
+    <form method = "post">
+        <input type= "textbox" name="num" placeholder="Enter  a number"><br><br>
+        <input type="textbox" name="num1" placeholder="End end value"><br><br>
+        <input type="submit" name="submit" value="Submit">
+       </form>
+       <?php
+       if(isset($_POST['submit'])){
+        $num=$_POST['num'];
+        $num1=$_POST['num1'];
+        echo "<h3>Multiplication Table of $num</h3>";
+            for($i=1;$i<=$num1;$i++){
+            echo"$num * $i =".$num*$i."<br>";        
+        }
+    }
+
+       ?>
+    
+</body>
+</html>
